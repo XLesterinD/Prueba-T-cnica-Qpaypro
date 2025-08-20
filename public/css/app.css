@@ -1,0 +1,135 @@
+.landing {
+    height: 100vh;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4); /* degradado moderno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.donation-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.donation-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.donation-box p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #4b5563;
+}
+
+.btn-donate {
+    display: inline-block;
+    background: skyblue;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.btn-donate:hover {
+    background: blue;
+}
+
+
+/*FORM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+body {
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1f2937;
+}
+
+/* Contenedor principal */
+.container {
+    background: rgba(255, 255, 255, 0.97);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+/* Título */
+.container h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #111827;
+}
+
+/* Labels */
+form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #374151;
+}
+
+/* Inputs y textarea */
+.form-control {
+    border-radius: 8px;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #06b6d4;
+    box-shadow: 0 0 8px rgba(6, 182, 212, 0.4);
+}
+
+/* Botón */
+.btn-success {
+    background-color: #16a34a;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-success:hover {
+    background-color: #15803d;
+    transform: translateY(-2px);
+}
+
+/* Errores */
+.text-danger {
+    font-size: 0.9rem;
+}
+
+/* Mensajes opcionales */
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Animación de entrada */
+.container {
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
