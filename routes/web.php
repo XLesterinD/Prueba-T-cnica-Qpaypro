@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DonationController;
 
+
+
 // Página principal (landing)
 Route::get('/', [DonationController::class, 'landing'])->name('landing');
 
@@ -27,7 +29,16 @@ Route::get('/dashboard', [DonationController::class, 'dashboard'])
     ->name('dashboard');
 
 
-// Ingreso al Dashboard
-Route::middleware('auth.basic')->group(function () {
+// Login
+Route::get('/login', [DonationController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [DonationController::class, 'login'])->name('login.post');
+
+// Logout
+Route::post('/logout', [DonationController::class, 'logout'])->name('logout');
+
+// Dashboard protegido por sesiones
+Route::middleware('auth')->group(function () {
     Route::get('/admin', [DonationController::class, 'dashboard'])->name('dashboard');
 });
+
+

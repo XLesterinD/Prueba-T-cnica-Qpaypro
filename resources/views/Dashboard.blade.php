@@ -5,7 +5,7 @@
     <h1>Panel de Donaciones</h1>
 
     <!-- Barra de búsqueda opcional -->
-    <form method="GET" action="{{ route('dashboard') }}" class="mb-3">
+    <form method="GET" action="{{ route('dashboard') }}" class="contenido_dash mb-3">
         <input type="text" name="search" value="{{ request('search') }}" placeholder="Buscar..." class="form-control w-25 d-inline">
         <button type="submit" class="btn btn-primary">Buscar</button>
     </form>
@@ -14,16 +14,19 @@
         <thead>
             <tr>
                 <th>Nombre</th>
+                <th>Apellido</th>
                 <th>Correo</th>
                 <th>Teléfono</th>
                 <th>Monto</th>
                 <th>Estado del pago</th>
+                
             </tr>
         </thead>
         <tbody>
             @forelse($donations as $donation)
                 <tr>
                     <td>{{ $donation->name }}</td>
+                    <td>{{ $donation->last_name }}</td>
                     <td>{{ $donation->email }}</td>
                     <td>{{ $donation->phone }}</td>
                     <td>${{ number_format($donation->amount, 2) }}</td>
@@ -77,6 +80,16 @@
     });
     </script>
 
+    <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button type="submit" class="btn btn-danger">Cerrar sesión</button>
+        <style>
+            .btn {
+                margin: 15px 0;
+            }
+        </style>
+
+    </form>
 
 
     <!-- Paginación -->

@@ -13,6 +13,10 @@
           <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
         </li>
       </ul>
+      <form method="POST" action="{{ route('logout') }}">
+        @csrf
+        <button class ="btn btn-danger" type="submit">Sesión</button>
+      </form>
     </div>
   </div>
 </nav>

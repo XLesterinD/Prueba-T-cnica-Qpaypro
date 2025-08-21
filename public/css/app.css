@@ -98,7 +98,7 @@ form label {
     font-size: 1.1rem;
     font-weight: bold;
     border-radius: 8px;
-    width: 100%;
+    width: 50%;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -132,4 +132,10 @@ textarea.form-control {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/*DASHBOARD*/
+
+.contenido_dash {
+    width: 1000px;
 }
